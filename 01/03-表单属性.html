@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" id="myForm">
+    <!--autofocus 自动获取焦点-->
+    <!--autocomplete 自动完成 on 打开 off 关闭，必须提交过，并且有name属性-->
+    username: <input type="text" name="username" placeholder="请输入用户名" autofocus autocomplete="on"> <br>
+    <!--required必须输入-->
+    <!--pattern 正则验证-->
+    tel: <input type="tel" required pattern="^(\+86)?1\d{10}$"><br>
+    file: <input type="file" name="photo" multiple><br>
+    <!--多个提交，逗号分割-->
+    email: <input type="email" name="email" multiple><br>
+    <input type="submit">
+
+</form>
+<!--form formid绑定提交-->
+address: <input type="text" name="address" form="myForm">
+
+</body>
+</html>
