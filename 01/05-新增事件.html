@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    username: <input type="text" name="username" id="username"><br>
+    tel: <input type="tel" name="userPhone" id="userPhone" pattern="^(\+86)?1\d{10}$"> <br>
+    <input type="submit">
+</form>
+</body>
+<script>
+    /*1.oninput   每次输入触发事件  */
+    document.getElementById('username').oninput=function () {
+        console.log('oninput:'+ this.value);
+    }
+    /*每次失焦并有改动时触发事件*/
+    document.getElementById('username').onchange=function () {
+        console.log('onchange:' + this.value);
+    }
+    /*每次按键抬起触发事件*/
+    document.getElementById('username').onkeyup=function () {
+        console.log('onkeyup:' + this.value);
+    }
+    /* 2. oninvalid 每次校验失效触发事件*/
+    document.getElementById('userPhone').oninvalid=function () {
+        this.setCustomValidity('oninvalid 参数非法');
+        console.log('oninvalid 参数非法');
+    }
+</script>
+</html>
